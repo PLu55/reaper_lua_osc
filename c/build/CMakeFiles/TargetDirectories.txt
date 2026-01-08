@@ -1,0 +1,4 @@
+/home/plu/Projects/reaper_lua_osc/c/build/CMakeFiles/reaper_lua_osc.dir
+/home/plu/Projects/reaper_lua_osc/c/build/CMakeFiles/reaper_lua_osc_smoke.dir
+/home/plu/Projects/reaper_lua_osc/c/build/CMakeFiles/edit_cache.dir
+/home/plu/Projects/reaper_lua_osc/c/build/CMakeFiles/rebuild_cache.dir

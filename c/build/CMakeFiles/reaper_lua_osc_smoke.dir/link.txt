@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/reaper_lua_osc_smoke.dir/link.d CMakeFiles/reaper_lua_osc_smoke.dir/tests/smoke.c.o -o reaper_lua_osc_smoke  -Wl,-rpath,/home/plu/Projects/reaper_lua_osc/c/build libreaper_lua_osc.so.0.1.0
