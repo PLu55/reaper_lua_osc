@@ -117,61 +117,61 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named reaper_lua_osc
+# Target rules for targets named reaper_liblo
 
 # Build rule for target.
-reaper_lua_osc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reaper_lua_osc
-.PHONY : reaper_lua_osc
+reaper_liblo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reaper_liblo
+.PHONY : reaper_liblo
 
 # fast build rule for target.
-reaper_lua_osc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_lua_osc.dir/build.make CMakeFiles/reaper_lua_osc.dir/build
-.PHONY : reaper_lua_osc/fast
+reaper_liblo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_liblo.dir/build.make CMakeFiles/reaper_liblo.dir/build
+.PHONY : reaper_liblo/fast
 
 #=============================================================================
-# Target rules for targets named reaper_lua_osc_smoke
+# Target rules for targets named reaper_liblo_smoke
 
 # Build rule for target.
-reaper_lua_osc_smoke: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reaper_lua_osc_smoke
-.PHONY : reaper_lua_osc_smoke
+reaper_liblo_smoke: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reaper_liblo_smoke
+.PHONY : reaper_liblo_smoke
 
 # fast build rule for target.
-reaper_lua_osc_smoke/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_lua_osc_smoke.dir/build.make CMakeFiles/reaper_lua_osc_smoke.dir/build
-.PHONY : reaper_lua_osc_smoke/fast
+reaper_liblo_smoke/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_liblo_smoke.dir/build.make CMakeFiles/reaper_liblo_smoke.dir/build
+.PHONY : reaper_liblo_smoke/fast
 
-src/reaper_lua_osc.o: src/reaper_lua_osc.c.o
-.PHONY : src/reaper_lua_osc.o
+src/reaper_liblo.o: src/reaper_liblo.c.o
+.PHONY : src/reaper_liblo.o
 
 # target to build an object file
-src/reaper_lua_osc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_lua_osc.dir/build.make CMakeFiles/reaper_lua_osc.dir/src/reaper_lua_osc.c.o
-.PHONY : src/reaper_lua_osc.c.o
+src/reaper_liblo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_liblo.dir/build.make CMakeFiles/reaper_liblo.dir/src/reaper_liblo.c.o
+.PHONY : src/reaper_liblo.c.o
 
-src/reaper_lua_osc.i: src/reaper_lua_osc.c.i
-.PHONY : src/reaper_lua_osc.i
+src/reaper_liblo.i: src/reaper_liblo.c.i
+.PHONY : src/reaper_liblo.i
 
 # target to preprocess a source file
-src/reaper_lua_osc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_lua_osc.dir/build.make CMakeFiles/reaper_lua_osc.dir/src/reaper_lua_osc.c.i
-.PHONY : src/reaper_lua_osc.c.i
+src/reaper_liblo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_liblo.dir/build.make CMakeFiles/reaper_liblo.dir/src/reaper_liblo.c.i
+.PHONY : src/reaper_liblo.c.i
 
-src/reaper_lua_osc.s: src/reaper_lua_osc.c.s
-.PHONY : src/reaper_lua_osc.s
+src/reaper_liblo.s: src/reaper_liblo.c.s
+.PHONY : src/reaper_liblo.s
 
 # target to generate assembly for a file
-src/reaper_lua_osc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_lua_osc.dir/build.make CMakeFiles/reaper_lua_osc.dir/src/reaper_lua_osc.c.s
-.PHONY : src/reaper_lua_osc.c.s
+src/reaper_liblo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_liblo.dir/build.make CMakeFiles/reaper_liblo.dir/src/reaper_liblo.c.s
+.PHONY : src/reaper_liblo.c.s
 
 tests/smoke.o: tests/smoke.c.o
 .PHONY : tests/smoke.o
 
 # target to build an object file
 tests/smoke.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_lua_osc_smoke.dir/build.make CMakeFiles/reaper_lua_osc_smoke.dir/tests/smoke.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_liblo_smoke.dir/build.make CMakeFiles/reaper_liblo_smoke.dir/tests/smoke.c.o
 .PHONY : tests/smoke.c.o
 
 tests/smoke.i: tests/smoke.c.i
@@ -179,7 +179,7 @@ tests/smoke.i: tests/smoke.c.i
 
 # target to preprocess a source file
 tests/smoke.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_lua_osc_smoke.dir/build.make CMakeFiles/reaper_lua_osc_smoke.dir/tests/smoke.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_liblo_smoke.dir/build.make CMakeFiles/reaper_liblo_smoke.dir/tests/smoke.c.i
 .PHONY : tests/smoke.c.i
 
 tests/smoke.s: tests/smoke.c.s
@@ -187,7 +187,7 @@ tests/smoke.s: tests/smoke.c.s
 
 # target to generate assembly for a file
 tests/smoke.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_lua_osc_smoke.dir/build.make CMakeFiles/reaper_lua_osc_smoke.dir/tests/smoke.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaper_liblo_smoke.dir/build.make CMakeFiles/reaper_liblo_smoke.dir/tests/smoke.c.s
 .PHONY : tests/smoke.c.s
 
 # Help Target
@@ -198,11 +198,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... reaper_lua_osc"
-	@echo "... reaper_lua_osc_smoke"
-	@echo "... src/reaper_lua_osc.o"
-	@echo "... src/reaper_lua_osc.i"
-	@echo "... src/reaper_lua_osc.s"
+	@echo "... reaper_liblo"
+	@echo "... reaper_liblo_smoke"
+	@echo "... src/reaper_liblo.o"
+	@echo "... src/reaper_liblo.i"
+	@echo "... src/reaper_liblo.s"
 	@echo "... tests/smoke.o"
 	@echo "... tests/smoke.i"
 	@echo "... tests/smoke.s"

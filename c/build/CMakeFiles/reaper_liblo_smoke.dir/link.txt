@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/reaper_liblo_smoke.dir/link.d CMakeFiles/reaper_liblo_smoke.dir/tests/smoke.c.o -o reaper_liblo_smoke  -Wl,-rpath,/home/plu/Projects/reaper_lua_osc/c/build reaper_liblo.so.0.1.0 /usr/lib/x86_64-linux-gnu/liblua5.4.so -lm
