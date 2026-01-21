@@ -76,7 +76,7 @@ static void push_argv(lua_State *L, const char *types, lo_arg **argv, int argc)
 // IMPORTANT: REAPER API is not thread-safe. We therefore only call Lua callback,
 // which must NOT call reaper.* directly. The Lua side should queue work and execute
 // it via reaper.defer on the main thread.
-
+/*
 static int lo_handler(const char *path, const char *types, lo_arg **argv,
                       int argc, lo_message msg, void *user_data)
 {
@@ -96,6 +96,45 @@ static int lo_handler(const char *path, const char *types, lo_arg **argv,
     {
         // We cannot safely print with REAPER here; just swallow error.
         lua_pop(L, 1);
+    }
+    return 0;
+}
+*/
+
+static int lo_handler(const char *path, const char *types, lo_arg **argv,
+                      int argc, lo_message msg, void *user_data)
+{
+    method_ud *mud = (method_ud *)user_data;
+    lua_State *L = mud->L;
+
+    // Source address
+    const char *src_host = "";
+    const char *src_port = "";
+    lo_address src = lo_message_get_source(msg);
+    if (src)
+    {
+        const char *h = lo_address_get_hostname(src);
+        const char *p = lo_address_get_port(src);
+        if (h)
+            src_host = h;
+        if (p)
+            src_port = p;
+    }
+
+    // Call Lua callback:
+    // cb(path, types, src_host, src_port, argc, ...)
+    lua_rawgeti(L, LUA_REGISTRYINDEX, mud->cb_ref);
+    lua_pushstring(L, path);
+    lua_pushstring(L, types ? types : "");
+    lua_pushstring(L, src_host);
+    lua_pushstring(L, src_port);
+    lua_pushinteger(L, argc);
+    push_argv(L, types ? types : "", argv, argc);
+
+    int nargs = 5 + argc;
+    if (lua_pcall(L, nargs, 0, 0) != LUA_OK)
+    {
+        lua_pop(L, 1); // swallow error
     }
     return 0;
 }
