@@ -15,7 +15,7 @@ find_package(Lua 5.4 REQUIRED)
 option(REAPER_LIBLO_LINK_LUA "Link against liblua (useful for standalone builds; REAPER may provide Lua symbols)" OFF)
 
 # If set, copy the built module into your REAPER scripts folder so `require("reaper_liblo")` works.
-set(REAPER_LIBLO_DEPLOY_DIR "" CACHE PATH "Deploy directory for reaper_liblo.so (e.g. ~/.config/REAPER/Scripts/plums/core)")
+set(REAPER_LIBLO_DEPLOY_DIR "" CACHE PATH "Deploy directory for reaper_liblo.so (e.g. ~/.config/REAPER/Scripts/plums)")
 
 add_library(reaper_liblo SHARED
     src/reaper_liblo.c
